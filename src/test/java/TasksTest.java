@@ -6,7 +6,7 @@ public class TasksTest {
 
     @Test
     public void TestSimpleMatch() {
-        SimpleTask simpleTask =  new SimpleTask( 5, "Позвонить родителям");
+        SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
 
         boolean actual = simpleTask.matches("Позвонить");
 
@@ -16,7 +16,7 @@ public class TasksTest {
 
     @Test
     public void TestSimpleNotMatch() {
-        SimpleTask simpleTask =  new SimpleTask( 5, "Позвонить родителям");
+        SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
 
         boolean actual = simpleTask.matches("Написать");
 
@@ -26,7 +26,7 @@ public class TasksTest {
 
     @Test
     public void TestEpicMatch() {
-        String[] subtasks = { "Молоко", "Яйца", "Хлеб" };
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
         Epic epic = new Epic(55, subtasks);
 
         boolean actual = epic.matches("Хлеб");
@@ -37,7 +37,7 @@ public class TasksTest {
 
     @Test
     public void TestEpicNotMatch() {
-        String[] subtasks = { "Молоко", "Яйца", "Хлеб" };
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
         Epic epic = new Epic(55, subtasks);
 
         boolean actual = epic.matches("Пельмени");
